@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WADL Assignment Management</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        /* Custom CSS */
+        #assignmentTable {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        #assignmentTable th, #assignmentTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        #assignmentTable th {
+            background-color: #f2f2f2;
+        }
+        .status-column, .notes-column {
+            display: flex;
+            flex-direction: row;
+        }
+        .status-column label, .notes-column label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+
+    <!-- Header -->
+    <div data-role="header" data-position="fixed">
+        <h1 style="margin-left: 40%;">WADL Assignment Management</h1>
+    </div>
+
+    <!-- Content -->
+    <div role="main" class="ui-content">
+        <!-- Table -->
+        <table id="assignmentTable">
+            <thead>
+                <tr>
+                    <th>Assignment No</th>
+                    <th>Assignment Title</th>
+                    <th>Status</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Assignment 1</td>
+                    <td>
+                        <br>
+                        a. Create a responsive web page which shows the ecommerce/college/exam admin dashboard with
+                        sidebar and statistics in cards using HTML, CSS and Bootstrap.<br>
+                        b. Write a JavaScript Program to get the user registration data and push to array/local storage with AJAX
+                        POST method and data list in new page.
+                    </td>
+                    <td class="status-column">
+                        <div>
+                            <input type="checkbox" id="completed1">
+                            <label for="completed1">Completed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checked1">
+                            <label for="checked1">Checked</label>
+                        </div>
+                    </td>
+                    <td class="notes-column">
+                        <input type="text" id="notes1" placeholder="Enter notes">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assignment 2</td>
+                    <td>
+                        <br>
+                        a. Create version control account on GitHub and using Git commands to create repository and push
+                        your code to GitHub.<br>
+                        b. Create Docker Container Environment (NVIDIA Docker or any other).<br>
+                        c. Create an Angular application which will do following actions: Register User, Login User, Show User
+                        Data on Profile Component
+                    </td>
+                    <td class="status-column">
+                        <div>
+                            <input type="checkbox" id="completed2">
+                            <label for="completed2">Completed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checked2">
+                            <label for="checked2">Checked</label>
+                        </div>
+                    </td>
+                    <td class="notes-column">
+                        <input type="text" id="notes2" placeholder="Enter notes">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assignment 3</td>
+                    <td>
+                       <br>
+                        a. Create a Node.JS Application which serves a static website.<br>
+                        b. Create four API using Node.JS, ExpressJS and MongoDB for CURD Operations on assignment 2.C.
+                    </td>
+                    <td class="status-column">
+                        <div>
+                            <input type="checkbox" id="completed3">
+                            <label for="completed3">Completed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checked3">
+                            <label for="checked3">Checked</label>
+                        </div>
+                    </td>
+                    <td class="notes-column">
+                        <input type="text" id="notes3" placeholder="Enter notes">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Assignment 4</td>
+                    <td>
+                       <br>
+                        a. Create a simple Mobile Website using jQuery Mobile.<br>
+                        b. Deploy/Host Your web application on AWS VPC or AWS Elastic Beanstalk. Mini Project
+                    </td>
+                    <td class="status-column">
+                        <div>
+                            <input type="checkbox" id="completed4">
+                            <label for="completed4">Completed</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="checked4">
+                            <label for="checked4">Checked</label>
+                        </div>
+                    </td>
+                    <td class="notes-column">
+                        <input type="text" id="notes4" placeholder="Enter notes">
+                    </td>
+                </tr>
+                <!-- Add more rows for other assignments -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div data-role="footer" data-position="fixed">
+        <h4 style="margin-left: 40%;">&copy; 2024 WADL Assignment Management</h4>
+    </div>
+</div>
+
+</body>
+</html>
