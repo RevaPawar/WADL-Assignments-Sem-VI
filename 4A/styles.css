@@ -1,0 +1,110 @@
+
+#assignmentTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#assignmentTable th, #assignmentTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#assignmentTable th {
+    background-color: #f2f2f2;
+}
+.status-column, .notes-column {
+    display: flex;
+    flex-direction: row;
+}
+.status-column label, .notes-column label {
+    margin-right: 10px;
+}
+/* Style for CNSL assignment table */
+#cnslTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #cnslTable th,
+  #cnslTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #cnslTable th {
+    background-color: #f2f2f2;
+  }
+  
+  #cnslTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #cnslTable tr:hover {
+    background-color: #ddd;
+  }
+  
+  #cnslTable .status-column {
+    width: 100px;
+    text-align: center;
+  }
+  
+  #cnslTable .notes-column input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Optional: Adjust styles for checkboxes and labels */
+  #cnslTable input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  #cnslTable label {
+    cursor: pointer;
+  }
+
+  /* Style for CCL assignment table */
+#cclTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #cclTable th,
+  #cclTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #cclTable th {
+    background-color: #f2f2f2;
+  }
+  
+  #cclTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #cclTable tr:hover {
+    background-color: #ddd;
+  }
+  
+  #cclTable .status-column {
+    width: 100px;
+    text-align: center;
+  }
+  
+  #cclTable .notes-column input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  /* Optional: Adjust styles for checkboxes and labels */
+  #cclTable input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  #cclTable label {
+    cursor: pointer;
+  }
+  

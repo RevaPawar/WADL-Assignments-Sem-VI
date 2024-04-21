@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE Assignment Manager</title>
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom CSS */
+       /* Custom CSS */
+.navbar {
+    text-align: left;
+    padding: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Ensure the navbar stays above the content */
+}
+
+.navbar h1 {
+    margin-left: 15px;
+}
+
+.navbar .ui-link {
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color:black;
+}
+
+.cardi {
+    margin: 20px auto; /* Center-align horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px; /* Set maximum width */
+    position: relative;
+    z-index: 0; /* Ensure the card stays behind the navbar */
+}
+
+.background {
+    background: linear-gradient(90deg, #74ebd5, #ACB6E5);
+    height: 100%;
+    width: 100%;
+    min-height: 950px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Ensure the background stays behind the content */
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        margin: 10px; /* Adjust margin for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+.card {
+    margin: 20px auto; /* Center-align horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 900px;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Home Page -->
+
+<div data-role="page" id="home">
+
+    <!-- Navbar -->
+    <div role="main" class="ui-content">
+        <div class="cardi">
+            <div data-role="header" data-position="fixed" class="navbar">
+                <h1>TE Assignment Manager</h1>
+                <ul>
+                    <li><a href="#CNSL" class="ui-link">CNSL</a></li>
+                    <li><a href="#DSBDA" class="ui-link">DSBDA</a></li>
+                    <li><a href="#WADL" class="ui-link">WADL</a></li>
+                    <li><a href="#CCL" class="ui-link">CCL</a></li>
+                </ul>
+            </div>
+
+            <!-- Content -->
+            <!-- Card -->
+            <img src="WADLA41.jpg" alt="Welcome Image">
+            <h3>Welcome TE Students!</h3>
+            <p>Welcome to TE Assignment Manager, your one-stop solution for efficiently managing lab assignments for various subjects. With TE Assignment Manager, you can keep track of your assignments, monitor their status, and stay organized throughout your semester.</p>
+            <p>Whether it's for Computer Networks and Security Lab (CNSL), Data Science for Big Data Analytics Lab (DSBDAL), Web Application Development Lab (WADL), or Cloud Computing Lab (CCL), TE Assignment Manager has got you covered.</p>
+            <p>Get started now by selecting a subject from the navigation bar above and managing your assignments with ease!</p>
+        </div>
+    </div>
+
+    <!-- Background Gradient -->
+    <div class="background"></div>
+
+    <!-- Footer -->
+
+</div>
+<br>
+<br>
+<br>
+
+<!-- CNSL Page -->
+<div data-role="page" id="CNSL">
+    <!-- Content for CNSL Page -->
+    <div class="card">
+    <div data-role="page" id="cnsl-home">
+        <!-- Header -->
+        <div data-role="header" data-position="fixed">
+            <h1 style="margin-left: 0%;">CNSL Assignment Management</h1>
+        </div>
+    
+        <!-- Content -->
+        <div role="main" class="ui-content">
+            <!-- Table -->
+            <table id="cnslTable">
+                <thead>
+                    <tr>
+                        <th>Assignment No</th>
+                        <th>Assignment Title</th>
+                        <th>Status</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Assignment 1</td>
+                        <td>
+                            <br>
+                            1. Using a Network Simulator (e.g. packettracer) Configure Router for…<br>
+                            a.Configure a router using router commands and Configure Routing Information Protocol(RIP).<br>
+                            b. Configure Access Control lists – Standard & Extended.<br>
+                            c. Network Address Translation: Static, Dynamic &PAT (Port Address Translation)
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-c1">
+                                <label for="completed-c1">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-c1">
+                                <label for="checked-c1">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-c1" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 2</td>
+                        <td>
+                            <br>
+                            2. Using a Network Simulator (e.g. packet tracer) Configure Routing Protocols,<br>
+                            a. Configure EIGRP – Explore Neighbor-ship Requirements and Conditions, its K Values Metrics Assignment and Calculation.<br>
+                            b. OSPF – Explore Neighbor-ship Condition and Requirement, Neighbor-ship states, OSPF MetricCost Calculation.<br>
+                            c. WLAN with static IP addressing and DHCP with MAC security and filters.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-c2">
+                                <label for="completed-c2">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-c2">
+                                <label for="checked-c2">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-c2" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 3</td>
+                        <td>
+                           <br>
+                            3. Socket Programming in C/C++ on Linux.<br>
+                            a. TCP Client, TCP Server<br>
+                            b. UDP Client, UDP Server
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-c3">
+                                <label for="completed-c3">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-c3">
+                                <label for="checked-c3">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-c3" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 4</td>
+                        <td>
+                           <br>
+                            4. Introduction to server administration (server administration commands and their applications) and configuration of below Server: (Study/Demonstration Only)<br>
+                            a. FTP<br>
+                            b. Web Server
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-c4">
+                                <label for="completed-c4">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-c4">
+                                <label for="checked-c4">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-c4" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+            <h4 style="margin-left: 0%;">&copy; 2024 CNSL Assignment Management</h4>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- DSBDA Page -->
+<div data-role="page" id="DSBDA">
+    <!-- Content for DSBDA Page -->
+</div>
+<br>
+<br>
+<br>
+<!-- WADL Page -->
+<div data-role="page" id="WADL">
+    <!-- Content for WADL Page -->
+    <div class="card">
+    <div data-role="page" id="home">
+
+        <!-- Header -->
+        <div data-role="header" data-position="fixed">
+            <h1 style="margin-left: 0%;">WADL Assignment Management</h1>
+        </div>
+    
+        <!-- Content -->
+        <div role="main" class="ui-content">
+            <!-- Table -->
+            <table id="assignmentTable">
+                <thead>
+                    <tr>
+                        <th>Assignment No</th>
+                        <th>Assignment Title</th>
+                        <th>Status</th>
+                      
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Assignment 1</td>
+                        <td>
+                            <br>
+                            a. Create a responsive web page which shows the ecommerce/college/exam admin dashboard with
+                            sidebar and statistics in cards using HTML, CSS and Bootstrap.<br>
+                            b. Write a JavaScript Program to get the user registration data and push to array/local storage with AJAX
+                            POST method and data list in new page.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed1">
+                                <label for="completed1">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked1">
+                                <label for="checked1">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes1" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 2</td>
+                        <td>
+                            <br>
+                            a. Create version control account on GitHub and using Git commands to create repository and push
+                            your code to GitHub.<br>
+                            b. Create Docker Container Environment (NVIDIA Docker or any other).<br>
+                            c. Create an Angular application which will do following actions: Register User, Login User, Show User
+                            Data on Profile Component
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed2">
+                                <label for="completed2">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked2">
+                                <label for="checked2">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes2" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 3</td>
+                        <td>
+                           <br>
+                            a. Create a Node.JS Application which serves a static website.<br>
+                            b. Create four API using Node.JS, ExpressJS and MongoDB for CURD Operations on assignment 2.C.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed3">
+                                <label for="completed3">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked3">
+                                <label for="checked3">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes3" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 4</td>
+                        <td>
+                           <br>
+                            a. Create a simple Mobile Website using jQuery Mobile.<br>
+                            b. Deploy/Host Your web application on AWS VPC or AWS Elastic Beanstalk. Mini Project
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed4">
+                                <label for="completed4">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked4">
+                                <label for="checked4">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes4" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <!-- Add more rows for other assignments -->
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+            <h4 style="margin-left: 0%;">&copy; 2024 WADL Assignment Management</h4>
+        </div>
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<!-- CCL Page -->
+<div data-role="page" id="CCL">
+    <!-- Content for CCL Page -->
+    <div class="card">
+    <div data-role="page" id="ccl-home">
+        <!-- Header -->
+        <div data-role="header" data-position="fixed">
+            <h1 style="margin-left: 0%;">CCL Assignment Management</h1>
+        </div>
+    
+        <!-- Content -->
+        <div role="main" class="ui-content">
+            <!-- Table -->
+            <table id="cclTable">
+                <thead>
+                    <tr>
+                        <th>Assignment No</th>
+                        <th>Assignment Title</th>
+                        <th>Status</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Assignment 1</td>
+                        <td>
+                            <br>
+                            1. Install Google App Engine. Create hello world app and other simple web applications using python/java.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl1">
+                                <label for="completed-ccl1">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl1">
+                                <label for="checked-ccl1">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl1" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 2</td>
+                        <td>
+                            <br>
+                            2. Use GAE launcher to launch the web applications.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl2">
+                                <label for="completed-ccl2">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl2">
+                                <label for="checked-ccl2">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl2" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 3</td>
+                        <td>
+                           <br>
+                            3. Simulate a cloud scenario using CloudSim and run a scheduling algorithm that is not present in CloudSim.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl3">
+                                <label for="completed-ccl3">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl3">
+                                <label for="checked-ccl3">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl3" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 4</td>
+                        <td>
+                           <br>
+                            4. Find a procedure to transfer the files from one virtual machine to another virtual machine.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl4">
+                                <label for="completed-ccl4">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl4">
+                                <label for="checked-ccl4">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl4" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 5</td>
+                        <td>
+                           <br>
+                            5. Find a procedure to launch virtual machine using trystack (Online Openstack Demo Version).
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl5">
+                                <label for="completed-ccl5">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl5">
+                                <label for="checked-ccl5">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl5" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 6</td>
+                        <td>
+                           <br>
+                            6. Design and deploy a web application in a PaaS environment.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl6">
+                                <label for="completed-ccl6">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl6">
+                                <label for="checked-ccl6">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl6" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 7</td>
+                        <td>
+                           <br>
+                            7. Design and develop custom Application (Mini Project) using Salesforce Cloud.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl7">
+                                <label for="completed-ccl7">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl7">
+                                <label for="checked-ccl7">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl7" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assignment 8</td>
+                        <td>
+                           <br>
+                            8. Design an Assignment to retrieve, verify, and store user credentials using Firebase Authentication, the Google App Engine standard environment, and Google Cloud Data store.
+                        </td>
+                        <td class="status-column">
+                            <div>
+                                <input type="checkbox" id="completed-ccl8">
+                                <label for="completed-ccl8">Completed</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="checked-ccl8">
+                                <label for="checked-ccl8">Checked</label>
+                            </div>
+                        </td>
+                        <td class="notes-column">
+                            <input type="text" id="notes-ccl8" placeholder="Enter notes">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+            <h4 style="margin-left: 0%;">&copy; 2024 CCL Assignment Management</h4>
+        </div>
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+
+</body>
+</html>
